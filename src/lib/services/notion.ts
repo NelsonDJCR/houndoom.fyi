@@ -68,7 +68,7 @@ export async function getFullCatalog(): Promise<{ packs: Pack[]; items: ItemData
 	const items = itemsResponse.results.map((page) => {
 		const props = (page as any).properties;
 		return {
-			id: parseNumber(props['id']),
+			id: parseNumber(props['ID']), // Items database uses uppercase ID
 			name: parseString(props['name']),
 			type: parseString(props['type']),
 			thumbnail: parseString(props['thumbnail']),
@@ -87,7 +87,7 @@ export async function getFullCatalog(): Promise<{ packs: Pack[]; items: ItemData
 		const itemsStr = parseString(props['items']);
 
 		return {
-			id: parseNumber(props['id']),
+			id: parseNumber(props['id']), // Packs database uses lowercase id
 			name: parseString(props['name']),
 			cover: parseString(props['cover']),
 			price: parseNumber(props['price']),
