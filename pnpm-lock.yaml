@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@notionhq/client':
+        specifier: 4.0.2
+        version: 4.0.2
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -148,6 +152,10 @@ packages:
     peerDependencies:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
+
+  '@notionhq/client@4.0.2':
+    resolution: {integrity: sha512-4pk3dm4umhjsRI0umCnJ8lCZh0TMiaMdkY0rz6FV4OqVuTsmYFV3pk+YTR5S8792ZY2Rm4lJHlLj05HQVKDuIg==}
+    engines: {node: '>=18'}
 
   '@oxc-project/types@0.133.0':
     resolution: {integrity: sha512-KzkdCd6Uxqnf6l3HOw1xfatAlUURA0g14cvBYFyJ5SaNOQbOUvBr9PKArcPcrNIeRsBdgcUzOGrhKveVpvOIGA==}
@@ -1082,6 +1090,8 @@ snapshots:
       '@emnapi/runtime': 1.10.0
       '@tybys/wasm-util': 0.10.2
     optional: true
+
+  '@notionhq/client@4.0.2': {}
 
   '@oxc-project/types@0.133.0': {}
 
