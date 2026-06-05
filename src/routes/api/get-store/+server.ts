@@ -1,10 +1,10 @@
 import { json } from '@sveltejs/kit';
-import { getStore } from '$lib/services/notion';
+import { getFullCatalog } from '$lib/services/notion';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async () => {
 	try {
-		const store = await getStore();
+		const store = await getFullCatalog();
 		return json(store);
 	} catch (error) {
 		console.error('Error fetching store data:', error);

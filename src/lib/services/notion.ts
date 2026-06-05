@@ -60,7 +60,7 @@ interface ItemData {
 	damage: number;
 }
 
-export async function getStore(): Promise<{ packs: Pack[]; items: ItemData[] }> {
+export async function getFullCatalog(): Promise<{ packs: Pack[]; items: ItemData[] }> {
 	const itemsResponse = await notion.databases.query({
 		database_id: env.NOTION_ITEMS_DATABASE_ID,
 	});
