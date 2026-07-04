@@ -2,6 +2,8 @@ import { json } from '@sveltejs/kit';
 import { getFullCatalog } from '$lib/services/notion';
 import type { RequestHandler } from './$types';
 
+const GET_ALL_STORE = true;
+
 function clearStore(catalog: Awaited<ReturnType<typeof getFullCatalog>>) {
 	const shuffledPacks = [...catalog.packs].sort(() => Math.random() - 0.5);
 	const randomPack = shuffledPacks.slice(0, 1);
@@ -13,6 +15,11 @@ function clearStore(catalog: Awaited<ReturnType<typeof getFullCatalog>>) {
 export const GET: RequestHandler = async () => {
 	try {
 		const store = await getFullCatalog();
+
+		if (GET_ALL_STORE) {
+			return json({ pack: store.packs, items: store.items });
+		}
+
 		const clearedStore = clearStore(store);
 		return json(clearedStore);
 	} catch (error) {
