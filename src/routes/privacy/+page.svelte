@@ -203,7 +203,7 @@
         Si tienes preguntas, solicitudes relacionadas con tus datos o inquietudes sobre esta Política de
         Privacidad, puedes contactarnos en:
       </p>
-      <p><a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></p>
+      <p><a href="mailto:contact@nelsondjcr.com">contact@nelsondjcr.com</a></p>
       <p>NelsonDJCR — Desarrollador de La Leyenda del Elixir</p>
     </div>
   </section>
@@ -211,7 +211,7 @@
 </main>
 
 <footer>
-  © 2026 NelsonDJCR. Todos los derechos reservados. Este documento no constituye asesoría legal.
+  © 2026 NelsonDJCR. Todos los derechos reservados.
 </footer>
 <style>
   :root {
